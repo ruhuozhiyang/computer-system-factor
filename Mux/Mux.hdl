@@ -1,0 +1,13 @@
+// if sel=0 then out=a else out=b;(也叫选择器)
+// 实现逻辑: sel·b + 非sel·a
+
+CHIP Mux {
+    IN a, b, sel;
+    OUT out;
+     
+    PARTS:
+    Not(in=sel, out=nots);
+    And(a=sel, b=b, out=and1);
+    And(a=nots, b=a, out=and2);
+    Or(a=and1, b=and2, out=out);
+}
