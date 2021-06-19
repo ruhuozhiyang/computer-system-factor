@@ -1,0 +1,12 @@
+// if sel=0 then {a=in, b=0} else {a=0, b=in}
+//实现逻辑: b=sel·in  a=非sel·in   也就是用到两个与门 一个非门
+
+CHIP DMux {
+    IN sel, in;
+    OUT a, b;
+    
+    PARTS:
+    Not(in=sel, out=notSel);
+    And(a=sel, b=in, out=b);
+    And(a=notSel, b=in, out=a);
+}
