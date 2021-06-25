@@ -3,3 +3,7 @@
 
 ### 多位基本门(Multi-Bit Versions of Basic Gates)
 ### 通用计算机的基本要求是：能够在多位数据线上运行。多位数据线又称为总线（bus）。例如有16位数据总线、32位数据总线等；
+
+### 多通道逻辑门(multi-way versions of basic gates)
+多通道Or
+对于一个N位的Or门，当N位输入变量中任意一位或一位以上为1，输出就为1，否则就为0；
