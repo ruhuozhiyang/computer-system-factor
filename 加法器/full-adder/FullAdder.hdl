@@ -1,0 +1,9 @@
+CHIP FullAdder {
+    IN a, b, c;
+    OUT sum, carry;
+    
+    PARTS:
+    HalfAdder(a=a, b=b, sum=sum1, carry=carry1); // 先对其中两个数进行半加器运算，进位为carry1，累加位为sum1
+    HalfAdder(a=c, b=sum1, sum=sum, carry=carry2); // 然后继续累加另一个数。此时累加位就是最终的累加位，进位为carry2.
+    Or(a=carry1, b=carry2, out=carry); // 对两次获的进位进行or运算，最多只有一次进位为1，或运算符合实现。
+}

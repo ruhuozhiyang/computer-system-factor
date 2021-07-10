@@ -7,3 +7,9 @@
 ### 多通道逻辑门(multi-way versions of basic gates)
 多通道Or
 对于一个N位的Or门，当N位输入变量中任意一位或一位以上为1，输出就为1，否则就为0；
+
+### 算术逻辑单元ALU (Arithmetic Logical Unit)
+# 可以用来封装硬件执行的所有基本算术操作和逻辑操作。
+
+### 先介绍加法器
+# 半加器/全加器/增量器/加法器
